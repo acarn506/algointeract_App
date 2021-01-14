@@ -2,7 +2,14 @@
 
 My contributions on the development of algointeract.com
 
+
+## Algorithm Highlight Feature 
+
 ![Highlight Clip](clips/algo_clip.gif)
+
+### Code
+
+Reset nodes back to their original color after algorithm has finished
 
 ```javascript
 //reset node color back to original
@@ -23,12 +30,17 @@ resetState = (counter) => {
     });
 
     this.setState({
-      ...(this.state.data.nodes = origNodes),
+    data.nodes : origNodes
     });
   };
   //calls when promise is resolved
   myP.then(this.sucessHandler);
 };
+```
+
+The method our algorithms would call as they move from one node to the next depending on the selected algorithm where the color of the node would change for highlighting presence and update the new state.
+
+```javascript
 
 //Highlight Node -> Parameter: Node id
 highlightHandler = (id) => {
@@ -57,9 +69,11 @@ highlightHandler = (id) => {
 
   //update original state with the new state
   this.setState({
-    ...(this.state.data.nodes = nodes),
+  data.nodes : nodes
   });
   //call to reset back to original state
   //this.resetState(origNode, nodeIndex);
 };
 ```
+
+

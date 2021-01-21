@@ -14,7 +14,7 @@
 
 ![Highlight Clip](clips/algo_clip.gif)
 
-### Description
+### Clip Description
 
 Graph Visualizer performs a Breadth-First Search on an undirected graph by simply entering in the start and end destination, selecting the algorithm, and press the start button.  
 
@@ -90,7 +90,7 @@ resetState = (counter) => {
 
 ![Linked List Clip](clips/linkedlist.gif)
 
-### Description 
+### Clip Description 
 
 Append and prepend a few extra nodes to the constructed linked list, select algorithm tab, enter target value to search for, and press the start Linear Search button to find the requested node.  
 

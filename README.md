@@ -1,7 +1,14 @@
 # algointeract_App
 
-My contributions on the development of algointeract.com
+### My contributions on the development of algointeract.com
 
+## Purpose of algointeract
+
+- Collaborated with a team to develop an interactive web app featuring and modeling data structures to provide assistance to fellow Computer Science students and professors. 
+
+- Help a student understand the fundamental aspects of basic data structure
+
+- Curious of how your data might work within a certain algorithm
 
 ## Algorithm Highlight Feature 
 
@@ -76,4 +83,6 @@ highlightHandler = (id) => {
 };
 ```
 
+## Linked List Interface 
 
+![Linked List Clip](clips/linkedlist.gif)

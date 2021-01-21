@@ -14,6 +14,10 @@
 
 ![Highlight Clip](clips/algo_clip.gif)
 
+### Description
+
+Graph Visualizer performs a Breadth-First Search on an undirected graph by simply entering in the start and end destination, selecting the algorithm, and press the start button.  
+
 ### Code
 
 Reset nodes back to their original color after algorithm has finished
@@ -86,3 +90,9 @@ highlightHandler = (id) => {
 ## Linked List Interface 
 
 ![Linked List Clip](clips/linkedlist.gif)
+
+### Description 
+
+Append and prepend a few extra nodes to the constructed linked list, select algorithm tab, enter target value to search for, and press the start Linear Search button to find the requested node.  
+
+### Code 

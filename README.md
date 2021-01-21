@@ -96,3 +96,91 @@ highlightHandler = (id) => {
 Append and prepend a few extra nodes to the constructed linked list, select algorithm tab, enter target value to search for, and press the start Linear Search button to find the requested node.  
 
 ### Code 
+
+Linear Search Algorithm 
+
+```javascript
+ linearSearch = () => {
+
+   var counter = 0;
+   // listOrder is an array that contains the order of the linked list elements 
+   for (let i = 0; i < this.state.listOrder.length; i++) {
+   
+     // check if keyNode string equals current node's id string
+     if (this.state.algoData.keyNode === this.state.listOrder[i]) {
+       console.log("found key node");
+       
+       // if target node is found, node flashes green 5 times 
+       for (let j = 0; j < 5; j++) {
+         setTimeout(
+           () => this.foundTarget(this.state.algoData.keyNode),
+           1200 * counter
+         );
+         counter++;
+       }
+       break;
+     }
+     
+     // highlight nodes/links as the algorithm traverses
+     setTimeout(
+       () => this.highlightHandler(this.state.listOrder[i], counter),
+       1000 * (counter + 1)
+     );
+     counter++;
+   }
+   // Once algo finishes set back to original node color
+   this.resetState(counter);
+ };
+```
+The logic I used for appending a node to a linked list is practically the same traditional format compared to any other language.  The difference in the code was having to maintain state management as I had to copy current states and update them with the new state. 
+
+```javascript
+appendNode = () => {
+
+  //get link list tail and the newly added node
+  let listInfo = this.state.listInfo;
+  let newNode = this.getNewNode();
+  
+  // create copy of listOrder
+  let newList = [...this.state.listOrder];
+  // push new node's id (a string) onto newList
+  newList.push(newNode.id);
+  // update listOrder with newList
+  this.setState({ listOrder: newList });
+
+  //find the new tail index
+  let tailIndex = this.state.data.nodes.findIndex((node) => {
+    return node.nodeid === listInfo.tail;
+  });
+  
+  //create instance of the tail node
+  const tailNode = {
+    ...this.state.data.nodes[tailIndex],
+  };
+  
+  //assign current tail to new node
+  tailNode.next = newNode.nodeid;
+  //copy array of nodes
+  let newNodes = [...this.state.data.nodes];
+  //update copy of nodes
+  newNodes[tailIndex] = tailNode;
+  //update tail to point to the new tail node
+  listInfo.tail = newNode.nodeid;
+  //update state of nodes and tail state
+  this.setState({
+    listInfo: listInfo,
+  });
+
+  this.setState({
+  data.nodes : newNodes
+  });
+
+  this.setState({ listOrder: newList });
+
+  //update link state
+  this.state.data.links.push({
+    source: tailNode.id,
+    target: newNode.id,
+  });
+};
+```

@@ -6,7 +6,7 @@
 
 - Collaborated with a team to develop an interactive web app featuring and modeling data structures to provide assistance to fellow Computer Science students and professors. 
 
-- Help a student understand the fundamental aspects of basic data structure
+- Help students understand the fundamental aspects of basic data structures
 
 - Curious of how your data might work within a certain algorithm
 
